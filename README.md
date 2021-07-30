@@ -5,6 +5,7 @@ arkpes-test is an implementation of the [Ark Dev Assignment](Ark_dev_assignment.
 * Frontend Project: **ark-pes-ui**
 
 ## Run Locally
+### Backend
 _These steps are given from Intelij_
 
 To run the backend app locally, right click and run the **ArkpesTestApplication** in _arkpes_test > src > main > java > com.arkpes.arkpes_test_.
@@ -20,7 +21,7 @@ To run the PostMan collection of requests:
 
 You should now have the arkpes_test collection of requests in your postman workspace.
 
-To run the frontend:
+### Frontend
 * Make sure the backend app is running
 * Navigate to the UI project folder
 * Run ```npm install```
@@ -33,14 +34,14 @@ To run the frontend:
 I started my backend design process with the rough UML Class Diagram below. 
 
 While creating this diagram, I
-tried to see if there was any clear opportunity for a software design pattern to provide value.
+tried to see if there was any clear opportunity for a software design pattern that would provide value.
 Especially my favorite factory pattern. If there was more of a difference in fields or logic between the domestic and international 
 investors, I would of had them be children inheriting from an investor super class.
 
 [![N|Rough UML Class Diagram](/arkpes_test/Ark-Test-UML.png)]
 
 The design evolved from there but maintained my following priorities:
-* Layered separation of concerns
+* Layered separation of concerns for low coupling
     * Control layer dealing with strictly all endpoint entry setup
     * Service layer dealing with strictly all the app's logic
     * Data layer dealing with strictly all interactions with the DB
@@ -54,7 +55,7 @@ SQL DB or an in memory DB.
 
 ### Frontend
 
-I tackled the fronted last and wanted to focus on functional logic with component separation
+I tackled the fronted last and wanted to focus on functional logic with component separation.
 
 I chose to use Ant Design as a library for quick, functional, and pleasant looking low level components.
 
