@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "286537c4-807a-457d-b4cc-ac66003543ba",
+		"name": "arkpes_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/getAllClients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getAllClients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Clients Filter By Description",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/getAllClients?filterField=description&filterValue=test 1 Description",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getAllClients"
+					],
+					"query": [
+						{
+							"key": "filterField",
+							"value": "description"
+						},
+						{
+							"key": "filterValue",
+							"value": "test 1 Description"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Clients Filter By Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/getAllClients?filterField=type&filterValue=domestic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getAllClients"
+					],
+					"query": [
+						{
+							"key": "filterField",
+							"value": "type"
+						},
+						{
+							"key": "filterValue",
+							"value": "domestic"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Client's Investors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/getClientsInvestors?clientName=test 2 client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getClientsInvestors"
+					],
+					"query": [
+						{
+							"key": "clientName",
+							"value": "test 2 client"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Investor's Funds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/getInvestorsFunds?investorName=test investor 2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getInvestorsFunds"
+					],
+					"query": [
+						{
+							"key": "investorName",
+							"value": "test investor 2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client Update Existing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 1,\r\n        \"name\": \"test update client\",\r\n        \"description\": \"test 1 Description\",\r\n        \"phoneNumber\": \"603\",\r\n        \"type\": \"DOMESTIC\",\r\n        \"investors\": [\r\n            {\r\n                \"id\": 1,\r\n                \"name\": \"test investor 1\",\r\n                \"funds\": [\r\n                    {\r\n                        \"id\": 1,\r\n                        \"amount\": 8.5\r\n                    },\r\n                    {\r\n                        \"id\": 2,\r\n                        \"amount\": 4.0\r\n                    },\r\n                    {\r\n                        \"id\": 6,\r\n                        \"amount\": 8.5\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/updateClient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"updateClient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Client Create New",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"test new client\",\r\n        \"description\": \"test 1 Description\",\r\n        \"phoneNumber\": \"603\",\r\n        \"type\": \"DOMESTIC\",\r\n        \"investors\": [\r\n            {\r\n                \"id\": 1,\r\n                \"name\": \"test investor 1\",\r\n                \"funds\": [\r\n                    {\r\n                        \"id\": 1,\r\n                        \"amount\": 8.5\r\n                    },\r\n                    {\r\n                        \"id\": 2,\r\n                        \"amount\": 4.0\r\n                    },\r\n                    {\r\n                        \"id\": 6,\r\n                        \"amount\": 8.5\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/updateClient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"updateClient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Clients Filter By Phone Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/getAllClients?filterField=phoneNumber&filterValue=603",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"getAllClients"
+					],
+					"query": [
+						{
+							"key": "filterField",
+							"value": "phoneNumber"
+						},
+						{
+							"key": "filterValue",
+							"value": "603"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
