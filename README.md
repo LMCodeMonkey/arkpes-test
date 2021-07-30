@@ -1,7 +1,7 @@
-#arkpes_test
+# arkpes_test
 arkpes_test is an implementation of the [Ark Dev Assignment](Ark_dev_assignment.pdf).
 
-##Run Locally
+## Run Locally
 _These steps are given from Intelij_
 
 To run the backend app locally, right click and run the **ArkpesTestApplication** in _arkpes_test > src > main > java > com.arkpes.arkpes_test_.
@@ -24,9 +24,9 @@ To run the frontend:
 * Run ```npm start```
 * The app will now be running at ```http://localhost:3000```
 
-##Thought Process
+## Thought Process
 
-###Backend
+### Backend
 I started my backend design process with the rough UML Class Diagram below. 
 
 While creating this diagram, I
@@ -34,7 +34,7 @@ tried to see if there was any clear opportunity for a software design pattern to
 Especially my favorite factory pattern. If there was more of a difference in fields or logic between the domestic and international 
 investors, I would of had them be children inheriting from an investor super class.
 
-![Rough UML Class Diagram](/Ark-Test-UML.png)
+[![N|Rough UML Class Diagram](/arkpes_test/Ark-Test-UML.png)]
 
 The design evolved from there but maintained my following priorities:
 * Layered separation of concerns
@@ -49,7 +49,7 @@ The design evolved from there but maintained my following priorities:
 The primary challenge I encountered with this assignment was that I had no previous experience using or testing Spring with a
 SQL DB or an in memory DB.
 
-###Frontend
+### Frontend
 
 I tackled the fronted last and wanted to focus on functional logic with component separation
 
@@ -64,7 +64,7 @@ in the table or by opening a modal containing a full form with input validation 
 
 There is of course a lot more visual improvements and code reuse work to be done in future iterations.
 
-##Future Development goals
+## Future Development goals
 * Find a better way for testing data access layer
 * Use Spring Slices to speed testing that requires Spring startup
 * Add unit testing for equality overrides, **InvestorRepository**
@@ -76,6 +76,6 @@ There is of course a lot more visual improvements and code reuse work to be done
 * Filtering on UI
 * Client editing from UI
 * Jest function testing and snapshot testing for the UI
-##Known Issues
+## Known Issues
 * Issues updating or adding _funds_
 * **ClientRepository** _testSaveUpdateClient_ test does not pass due to issues that I believe are related to updating _funds_
