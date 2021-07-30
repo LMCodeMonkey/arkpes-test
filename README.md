@@ -1,5 +1,8 @@
-# arkpes_test
-arkpes_test is an implementation of the [Ark Dev Assignment](Ark_dev_assignment.pdf).
+# arkpes-test
+arkpes-test is an implementation of the [Ark Dev Assignment](Ark_dev_assignment.pdf).
+
+* Backend Project: **arkpes_test**
+* Frontend Project: **ark-pes-ui**
 
 ## Run Locally
 _These steps are given from Intelij_
